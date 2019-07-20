@@ -1,3 +1,5 @@
+# Léo Valais's personal website sources
+[![Netlify Status](https://api.netlify.com/api/v1/badges/171d433b-2de4-4132-9cd3-b5fbab347c27/deploy-status)](https://app.netlify.com/sites/leovalais/deploys)
 
 ### Development mode
 To start the Figwheel compiler, navigate to the project folder and run the following command in the terminal:
