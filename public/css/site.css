@@ -13,23 +13,50 @@ body {
 div.cv {
     width: 210mm;
     height: 297mm;
-    padding: 20px 25px;
+    /* padding: 20px 25px; */
     box-shadow: 1px 1px 12px #555;
+    color: #333;
 }
 
-h1, h2, h3 {
-    color: #000;
+.middle-panel {
+    padding: 0px 10px;
 }
-h1 {
+
+.middle-panel h1 {
     font-size: 2em
 }
-
-h2 {
-    font-size: 1.5em
+.middle-panel h2 {
+    font-size: 1.25em
+}
+/* .middle-panel h2 .icon { */
+/*     margin-right: 8px; */
+/* } */
+.middle-panel h3 {
+    font-size: 0.9em
 }
 
-h3 {
-    font-size: 1em
+.entry .content .description {
+    font-size: 0.8em;
+}
+
+.tags .tag {
+    margin-left: 10px;
+}
+
+.left-panel {
+    color: #FFF;
+    padding: 20px 0px;
+    background-color: #333
+}
+
+.left-panel h1 {
+    font-size: 1.5em
+}
+.left-panel h2 {
+    font-size: 1em;
+}
+.left-panel h3 {
+    font-size: 0.5em;
 }
 
 a {
