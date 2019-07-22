@@ -1,34 +1,41 @@
 body {
-  font-family: 'Fira Sans', 'Helvetica Neue', Verdana, Helvetica, Arial, sans-serif;
-  width: 210mm;
-  margin: 0 auto;
-  padding-top: 72px;
-  -webkit-font-smoothing: antialiased;
-  font-size: 1.125em;
-  color: #333;
-  line-height: 1.5em;
+    font-family: 'Fira Sans', 'Helvetica Neue', Verdana, Helvetica, Arial, sans-serif;
+    max-width: 210mm;
+    margin: 0 auto;
+    padding-top: 72px;
+    -webkit-font-smoothing: antialiased;
+    font-size: 1.125em;
+    color: #333;
+    line-height: 1.5em;
+}
+
+div.cv {
+    width: 210mm;
+    height: 297mm;
+    padding: 20px 15px;
+    box-shadow: 1px 1px 12px #555;
 }
 
 h1, h2, h3 {
-  color: #000;
+    color: #000;
 }
 h1 {
-  font-size: 2.5em
+    font-size: 2.5em
 }
 
 h2 {
-  font-size: 2em
+    font-size: 2em
 }
 
 h3 {
-  font-size: 1.5em
+    font-size: 1.5em
 }
 
 a {
-  text-decoration: none;
-  color: #09f;
+    text-decoration: none;
+    color: #09f;
 }
 
 a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
