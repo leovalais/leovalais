@@ -72,6 +72,11 @@
         l "45%"]
     (gstring/format "hsl(%d, %s, %s)" h s l)))
 
+(defn icon [& classes]
+  [:i {:class (apply str
+                     (interleave (map str classes)
+                                 (repeat " ")))}])
+
 (defn skill [{:keys [skill awesomeness color image accent]}]
   (let [width 3
         box 30
@@ -122,7 +127,7 @@
 
 (defn cv-view []
   [:div.cv
-   [:h1 "Léo Valais"]
+   [:h1 "Léo Valais"] [icon "fab" "fa-github-alt"]
    [:h2 "Computer Science research & IT engineering (graduating 2020)"]
    [:p "Looking for a " [:em "6-month Spring internship"] " in "
     [:strong "Lisp/Clojure"] " or "
