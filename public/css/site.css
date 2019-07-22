@@ -3,6 +3,7 @@ body {
     max-width: 210mm;
     margin: 0 auto;
     padding-top: 72px;
+    padding-bottom: 72px;
     -webkit-font-smoothing: antialiased;
     font-size: 1.125em;
     color: #333;
@@ -12,7 +13,7 @@ body {
 div.cv {
     width: 210mm;
     height: 297mm;
-    padding: 20px 15px;
+    padding: 20px 25px;
     box-shadow: 1px 1px 12px #555;
 }
 
