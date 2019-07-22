@@ -34,12 +34,12 @@
                {:skill "Java"
                 :awesomeness 75
                 :image "http://assets.stickpng.com/thumbs/58480979cef1014c0b5e4901.png"}
-               {:skill "C"
-                :awesomeness 65
-                :image "https://cdn.jsdelivr.net/npm/@programming-languages-logos/c@0.0.3/c_256x256.png"}
                {:skill "C++"
                 :awesomeness 60
                 :image "https://cdn.iconscout.com/icon/free/png-256/c-plus-569563.png"}
+               {:skill "C"
+                :awesomeness 65
+                :image "https://cdn.jsdelivr.net/npm/@programming-languages-logos/c@0.0.3/c_256x256.png"}
                ]
 
               :web
@@ -106,13 +106,12 @@
                :width "52%" :height "52%"
                :href image}]]
      [:p {:style {:margin 0
-                  :font-size "100%"
                   :text-align "center"}}
       (if accent
         [accent skill]
         skill)]]))
 
-(def skillring-size "15%")
+(def skillring-size "10%")
 
 (defn skillset [category skills]
   [:div.skillset
@@ -121,7 +120,8 @@
           [:span {:style {:display "inline-block"
                           :width skillring-size
                           :height skillring-size
-                          :margin-left "10px"}}
+                          :margin-left "10px"
+                          :font-size "70%"}}
            [skill s]])
         skills)])
 
