@@ -1,0 +1,18 @@
+/* Reference: https://www.chilitime.design/2018/09/ActivityRings/ */
+
+@keyframes RingProgress {
+    0% {
+        stroke-dasharray: 0 100;
+    }
+}
+
+.activity-ring .ring {
+    transform-origin: 50%;
+}
+.activity-ring .completed {
+    animation: RingProgress 1s ease-in-out forwards;
+    stroke-linecap: round;
+}
+.activity-ring circle {
+    fill: none;
+}
