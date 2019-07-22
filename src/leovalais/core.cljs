@@ -10,19 +10,19 @@
 (def skills (r/atom
              [{:skill "Common Lisp"
                :awesomeness 94
-               :accent :strong
+               :accent :strong>em
                :image "https://www.european-lisp-symposium.org/static/logos/cl-foundation.png"}
               {:skill "Clojure(Script)"
                :awesomeness 80
-               :accent :strong
+               :accent :strong>em
                :image "https://upload.wikimedia.org/wikipedia/commons/5/5d/Clojure_logo.svg"}
               {:skill "OCaml"
                :awesomeness 85
-               :accent :em
+               :accent :strong>em
                :image "https://www.logolynx.com/images/logolynx/0f/0f520e29cef40f9db320d1807726ba9b.jpeg"}
               {:skill "Haskell"
                :awesomeness 70
-               :accent :em
+               :accent :strong>em
                :image "https://cdn.jsdelivr.net/npm/@programming-languages-logos/haskell@0.0.0/haskell_256x256.png"}
               {:skill "Python"
                :awesomeness 80
@@ -57,7 +57,9 @@
               {:skill "Illustrator"
                :awesomeness 30
                :image "https://pic.clubic.com/v1/images/1501704/raw"}
-              ]))
+              {:skill "Apple"
+               :awesomeness 75
+               :image "https://www.rbcafe.fr/wp-content/uploads/apple_256.png"}]))
 
 ;; -------------------------
 ;; Views
@@ -110,7 +112,7 @@
 (def skillring-size "42%")
 
 (defn skillset [skills]
-  [:div.skillset
+  [:div.skillset {:style {:margin-top "35px"}} ; XXX pifomètre
    (map (fn [s]
           [:span {:style {:display "inline-block"
                           :width skillring-size
