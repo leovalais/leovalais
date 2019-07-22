@@ -53,7 +53,7 @@
                 :awesomeness 45
                 :image "https://cv.beneyt.fr/images/logocss.png"}
                {:skill "Gimp"
-                :awesomeness 50
+                :awesomeness 40
                 :image "https://img-19.ccm2.net/A32teLO0gaI8gWItzOYPOXfzMP0=/0129df8cd66948a9982deae91b956987/ccm-faq/UdNoIiE2Mc0cL0hXoYsExsy60V-2-gimp-s-.png"}
                {:skill "Premiere Pro"
                 :awesomeness 40
@@ -125,10 +125,32 @@
            [skill s]])
         skills)])
 
+(defn contact [icon text url]
+  [:a {:href url
+       :style {:display "inline-block"
+               :font-size "75%"
+               :color "#777"}}
+   [:span {:style {:margin-right "6px"}} icon]
+   text])
+
+(def contact-separator [:span.contact-separator {:style {:margin "0px 10px"
+                                                         :color "#777"}}
+                        "•"])
+
 (defn cv-view []
   [:div.cv
-   [:h1 "Léo Valais"] [icon "fab" "fa-github-alt"]
-   [:h2 "Computer Science research & IT engineering (graduating 2020)"]
+   [:h1 "Léo Valais"]
+   [:div.contact {:style {:width "80%" :margin "auto" :text-align "center"}}
+    [contact [icon "fas" "fa-envelope"] "leo.valais97@gmail.com" "mailto:leo.valais97@gmail.com"]
+    contact-separator
+    [contact [icon "fab" "fa-github-alt"] "leovalais" "https://github.com/leovalais"]
+    contact-separator
+    [contact [icon "fab" "fa-linkedin"] "leovalais" "https://www.linkedin.com/in/leovalais/"]
+    contact-separator
+    [contact [icon "fab" "fa-twitter"] "_letrov" "https://twitter.com/_letrov"]
+    contact-separator
+    [contact [icon "fas" "fa-globe-europe"] "leovalais.netlify.com" "https://leovalais.netlify.com"]]
+   ;; [:h2 "Computer Science research & IT engineering (graduating 2020)"]
    [:p "Looking for a " [:em "6-month Spring internship"] " in "
     [:strong "Lisp/Clojure"] " or "
     [:strong "image processing"] "."]
