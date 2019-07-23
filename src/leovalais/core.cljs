@@ -144,8 +144,10 @@
 
 (def place-tag (partial tag [icon "fas" "fa-map-marker-alt"]))
 (def agenda-tag (partial tag [icon "far" "fa-calendar-alt"]))
+(def article-tag (partial tag  [icon "far" "fa-newspaper"]))
+(def code-tag (partial tag  [icon "fas" "fa-laptop-code"]))
 
-(defn entry [& {:keys [picture title tags content]}]
+(defn entry [& {:keys [picture title tags content link]}]
   [:div.entry {:style {:display :flex
                        :margin-top "10px"}}
    [:div.picture {:style {:width "10%"
@@ -157,7 +159,7 @@
                           :flex-direction :column}}
     [:div.heading {:style {:display :flex
                            :width "auto"}}
-     [:h3 {:style {:margin 0}} title]
+     [:h3 {:style {:margin 0}} [:a {:href link} title]]
      [:div.tags {:style {:display :flex
                          :flex-direction :row-reverse
                          :flex-grow 1}}
@@ -173,6 +175,7 @@
     content]])
 
 
+(def lrde-logo "https://www.lrde.epita.fr/skins/common/images/logo.png")
 (def left-panel-width 25)
 
 (defn cv-view []
@@ -196,20 +199,60 @@
 
     [section "Formation" [icon "fas" "fa-graduation-cap"]
      [entry
-      :picture "https://www.lrde.epita.fr/skins/common/images/logo.png"
+      :picture lrde-logo
       :title "LRDE"
-      :tags (list [place-tag "Le Kremlin-Bicêtre"] [agenda-tag "2017-2020"])
+      :link "https://www.epita.fr/nos-formations/diplome-ingenieur/cycle-ingenieur/les-majeures/"
+      :tags (list [code-tag "Common Lisp"]
+                  [place-tag "Le Kremlin-Bicêtre"]
+                  [agenda-tag "2017-2020"])
       :content [:p {:style {:margin 0}}
-                "ÉPITA's research and developement laboratory. Research specialization."]]
+                "ÉPITA's research and developement laboratory. Research specialization and a project supervized by laboratory's full-time researchers."]]
      [entry
       :picture "http://convention.epitanime.com/wp-content/uploads/2017/02/epita.jpg"
       :title [:span "ÉPITA" " " [:em "(graduating 2020)"]]
+      :link "https://www.epita.fr/nos-formations/diplome-ingenieur/cycle-ingenieur/les-majeures/#majeure-IMAGE"
       :tags (list [place-tag "Le Kremlin-Bicêtre"] [agenda-tag "2015-2020"])
       :content [:p {:style {:margin 0}} "Computer Science engineering school. Specialization in image processing and machine learning."]]]
 
-    [section "Experience" [icon "fas" "fa-user-tie"]
-     ]]])
+    [section "Publications" [icon "fas" "fa-scroll"]
+     [entry
+      :picture lrde-logo
+      :title "European Lisp Symposium 2019"
+      :link "https://www.lrde.epita.fr/wiki/Publications/valais.19.els"
+      :tags (list [article-tag [:a {:href "https://european-lisp-symposium.org/2019/index.html"}
+                                "Article"]]
+                  [agenda-tag "April 1, 2019"])
+      :content [:p "“Implementing Baker’s SUBTYPEP Decision Procedure”, based on my research work at LRDE."]]]
 
+    [section "Experience" [icon "fas" "fa-user-tie"]
+     [entry
+      :picture "https://european-lisp-symposium.org/static/favicon.png"
+      :title "Talk at European Lisp Symposium 2019"
+      :link "https://european-lisp-symposium.org/2019/index.html"
+      :tags (list [place-tag "Genova, Italy"]
+                  [agenda-tag "April 1, 2019"])
+      :content [:p "hello"]]
+     [entry
+      :picture "https://www.besport.com/images/be-red.svg"
+      :title "Dev. internship at BeSport"
+      :link "https://european-lisp-symposium.org/2019/index.html"
+      :tags (list [code-tag "OCaml"]
+                  [place-tag "Paris"]
+                  [agenda-tag "Sept-Dec, 2018"])
+      :content [:p "hello"]]
+     [entry
+      :picture lrde-logo
+      :title "Summer internship at LRDE"
+      :link "https://european-lisp-symposium.org/2019/index.html"
+      :tags (list [place-tag "Le Kremlin-Bicêtre"]
+                  [agenda-tag "May-July, 2017"])
+      :content [:p "hello"]]]
+
+    [section "Miscellaneous" [icon "fas" "fa-rocket"]
+     [:ul
+      [:li "a"]
+      [:li "b"]]
+     ]]])
 
 
 (defn mount-root []

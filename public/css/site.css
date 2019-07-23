@@ -28,15 +28,23 @@ div.cv {
 .middle-panel h2 {
     font-size: 1.25em
 }
-/* .middle-panel h2 .icon { */
-/*     margin-right: 8px; */
-/* } */
+
 .middle-panel h3 {
     font-size: 0.9em
 }
 
 .entry .content .description {
     font-size: 0.8em;
+}
+.entry .content .description p:first-child {
+    margin: 0;
+}
+.entry a {
+    color: #333;
+}
+.tag a {
+    color: #777;
+    text-decoration: underline;
 }
 
 .tags .tag {
