@@ -183,7 +183,18 @@
    [:div.left-panel {:style {:width (str left-panel-width "%")}}
     [skillset @skills]]
    [:div.middle-panel {:style {:width (str (- 100 left-panel-width) "%")}}
-    [:h1 {:style {:margin-left "20px"}} "Léo Valais"]
+    [:div.heading {:style {:display :flex}}
+     [:h1 {:style {:margin "25px 20px"
+                   :flex-grow 0}} "Léo Valais"]
+     [:div.badges {:style {:display :flex
+                           :align-items :center
+                           :justify-content :flex-end
+                           :flex-grow 1
+                           :color "#777"}}
+      (for [flag ["france" "uk" "spain"]]
+        [:img {:src (str flag ".png")
+               :width "40mm"
+               :style {:margin-right "5px"}}])]]
     [:div.contact {:style {:width "80%" :margin "auto" :text-align "center"}}
      [contact [icon "fas" "fa-envelope"] "leo.valais97@gmail.com" "mailto:leo.valais97@gmail.com"] contact-separator
      [contact [icon "fas" "fa-phone-alt"] "+33 7 60 06 39 14" "tel:+33760063914"] contact-separator
