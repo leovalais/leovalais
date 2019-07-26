@@ -65,7 +65,7 @@
 ;; Views
 
 (defn heatmap-color [heat]
-  (let [h (* (- 1.0 heat) 300)
+  (let [h (+ 30 (* heat 200))
         s "90%"
         l "45%"]
     (gstring/format "hsl(%d, %s, %s)" h s l)))
@@ -90,7 +90,7 @@
                             :stroke-width width
                             :r r
                             :style {:stroke color
-                                    :filter "opacity(0.2)"}}]
+                                    :opacity "0.2"}}]
        [:circle.completed {:cx "50%"
                            :cy "50%"
                            :stroke-width width
@@ -161,9 +161,9 @@
                            :width "auto"}}
      [:h3 {:style {:margin 0}} [:a {:href link} title]]
      [:div.tags {:style {:display :flex
-                         :flex-direction :row-reverse
+                         :justify-content :flex-end
                          :flex-grow 1}}
-      (reverse tags)]]
+      tags]]
     [:div.description content]]])
 
 (defn section [title icon & content]
