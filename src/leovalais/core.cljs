@@ -16,7 +16,8 @@
               {:skill "Image Processing"}
               {:skill "Distributed Computing"}
               {:skill "HPC"}
-              {:skill "Language theory"}
+              {:skill "Language theory"
+               :accent true}
               {:skill "Python"}
               {:skill "Rust"}
               {:skill "Java"}
