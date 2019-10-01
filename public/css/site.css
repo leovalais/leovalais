@@ -1,34 +1,75 @@
 body {
-  font-family: 'Helvetica Neue', Verdana, Helvetica, Arial, sans-serif;
-  max-width: 600px;
-  margin: 0 auto;
-  padding-top: 72px;
-  -webkit-font-smoothing: antialiased;
-  font-size: 1.125em;
-  color: #333;
-  line-height: 1.5em;
+    font-family: 'Fira Sans', 'Helvetica Neue', Verdana, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 1.125em;
+    color: #333;
+    line-height: 1.5em;
+    -webkit-print-color-adjust: exact;
 }
 
-h1, h2, h3 {
-  color: #000;
-}
-h1 {
-  font-size: 2.5em
+/* * { background-color: blue; } */
+/* * * { background-color: blueviolet; } */
+/* * * * { background-color: purple; } */
+/* * * * * { background-color: pink; } */
+/* * * * * * { background-color: red; } */
+/* * * * * * * { background-color: orange; } */
+/* * * * * * * * { background-color: yellow; } */
+/* * * * * * * * * { background-color: lime; } */
+/* * * * * * * * * * { background-color: green; } */
+/* * * * * * * * * * * { background-color: darkgreen; } */
+
+
+#app {
+    margin: 5mm auto;
 }
 
-h2 {
-  font-size: 2em
+.cv {
+    color: #333;
+    padding: 0px 20px;
 }
 
-h3 {
-  font-size: 1.5em
+.cv h1 {
+    font-size: 2em;
+}
+
+.cv h2 {
+    font-size: 1.25em;
+    border-bottom: 1px solid #DDD;
+}
+
+.cv h3 {
+    font-size: 0.9em;
+}
+
+.entry .content .description {
+    font-size: 0.8em;
+}
+.entry .content .description p:first-child {
+    margin: 0;
+}
+.entry a {
+    color: #333;
+}
+.tag a {
+    color: #777;
+    text-decoration: underline;
+}
+
+.tags .tag {
+    margin-left: 10px;
+}
+
+.left-panel {
+    color: #FFF;
+    padding: 20px 0px;
+    background-color: #333
 }
 
 a {
-  text-decoration: none;
-  color: #09f;
+    text-decoration: none;
+    color: #09f;
 }
 
 a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
