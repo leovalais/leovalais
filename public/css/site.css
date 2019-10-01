@@ -7,28 +7,38 @@ body {
     -webkit-print-color-adjust: exact;
 }
 
+/* * { background-color: blue; } */
+/* * * { background-color: blueviolet; } */
+/* * * * { background-color: purple; } */
+/* * * * * { background-color: pink; } */
+/* * * * * * { background-color: red; } */
+/* * * * * * * { background-color: orange; } */
+/* * * * * * * * { background-color: yellow; } */
+/* * * * * * * * * { background-color: lime; } */
+/* * * * * * * * * * { background-color: green; } */
+/* * * * * * * * * * * { background-color: darkgreen; } */
+
+
 #app {
     margin: 5mm auto;
 }
 
-div.cv {
-    /* padding: 20px 25px; */
+.cv {
     color: #333;
+    padding: 0px 20px;
 }
 
-.middle-panel {
-    padding: 0px 10px;
+.cv h1 {
+    font-size: 2em;
 }
 
-.middle-panel h1 {
-    font-size: 2em
-}
-.middle-panel h2 {
-    font-size: 1.25em
+.cv h2 {
+    font-size: 1.25em;
+    border-bottom: 1px solid #DDD;
 }
 
-.middle-panel h3 {
-    font-size: 0.9em
+.cv h3 {
+    font-size: 0.9em;
 }
 
 .entry .content .description {
@@ -53,16 +63,6 @@ div.cv {
     color: #FFF;
     padding: 20px 0px;
     background-color: #333
-}
-
-.left-panel h1 {
-    font-size: 1.5em
-}
-.left-panel h2 {
-    font-size: 1em;
-}
-.left-panel h3 {
-    font-size: 0.5em;
 }
 
 a {
