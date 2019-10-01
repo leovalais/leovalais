@@ -159,7 +159,8 @@
      :picture lrde-logo
      :title "European Lisp Symposium 2019"
      :link "https://www.lrde.epita.fr/wiki/Publications/valais.19.els"
-     :tags (list [article-tag [:a {:href "https://european-lisp-symposium.org/2019/index.html"}
+     :tags (list [code-tag "Common Lisp"]
+                 [article-tag [:a {:href "https://european-lisp-symposium.org/2019/index.html"}
                                "Article"]]
                  [agenda-tag "April 1, 2019"])
      :content [:p "“Implementing Baker’s SUBTYPEP Decision Procedure”, based on my research work at LRDE."]]]
@@ -190,7 +191,8 @@
      :picture lrde-logo
      :title "Summer internship at LRDE"
      :link "https://european-lisp-symposium.org/2019/index.html"
-     :tags (list [place-tag "Le Kremlin-Bicêtre"]
+     :tags (list [code-tag "Common Lisp"]
+                 [place-tag "Le Kremlin-Bicêtre"]
                  [agenda-tag "May-July, 2017"])
      :content [:p "hello"]]]
 
