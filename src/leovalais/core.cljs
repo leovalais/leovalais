@@ -112,7 +112,7 @@
     [:div.description content]]])
 
 (defn section [title icon & content]
-  [:section {:style {:margin-bottom 25}}
+  [:section {:style {:margin-bottom 20}}
    [:h2 {:style {:margin-bottom 0
                  :padding-bottom 2
                  :border-bottom "1px solid #DDD"}}
@@ -181,7 +181,7 @@
                  [agenda-tag "April 1, 2019"])
      :content [:p "“Implementing Baker’s " [:code "SUBTYPEP"] " Decision Procedure”, based on my research
 work at LRDE. Presentation of an alternative implementation for " [:code "SUBTYPEP"] ", a standard
-Common Lisp predicate."]]]
+Common Lisp predicate. Involves type theory, type representation and performance concerns."]]]
 
    [section "Experience" [icon "fas" "fa-user-tie"]
     [entry
