@@ -16,6 +16,7 @@
               {:skill "Image Processing"}
               {:skill "Distributed Computing"}
               {:skill "HPC"}
+              {:skill "Language theory"}
               {:skill "Python"}
               {:skill "Rust"}
               {:skill "Java"}
@@ -87,6 +88,8 @@
 (def agenda-tag (partial tag [icon "far" "fa-calendar-alt"]))
 (def article-tag (partial tag  [icon "far" "fa-newspaper"]))
 (def code-tag (partial tag  [icon "fas" "fa-laptop-code"]))
+(def github-tag (tag [icon "fab" "fa-github"] "Hosted on GitHub"))
+(def wip-tag (tag [icon "fas" "fa-hard-hat"] "Work in progress"))
 
 (defn entry [& {:keys [picture title tags content link]}]
   [:div.entry {:style {:display :flex
@@ -137,7 +140,7 @@
        [:img {:src (str flag ".png")
               :width "40mm"
               :style {:margin-right "5px"}}])]]
-   [:div.contact {:style {:width "60%" :margin "auto" :text-align "center"}}
+   [:div.contact {:style {:width "100%" :margin "auto" :text-align "center"}}
     [contact [icon "fas" "fa-envelope"] "leo.valais97@gmail.com" "mailto:leo.valais97@gmail.com"] contact-separator
     [contact [icon "fas" "fa-phone-alt"] "+33 7 60 06 39 14" "tel:+33760063914"] contact-separator
     [contact [icon "fab" "fa-github-alt"] "leovalais" "https://github.com/leovalais"] contact-separator
@@ -146,7 +149,8 @@
     [contact [icon "fas" "fa-globe-europe"] "leovalais.netlify.com" "https://leovalais.netlify.com"]]
    [:p.abstract {:style {:margin 0 :margin-top 5}}
     "Looking for a six-month internship in " [emph "image processing"] ", " [emph "machine learning"]
-    " or about " [emph "Lisp languages"] " such as Common Lisp or Clojure."]
+    " or about " [emph "Lisp languages"] "."]
+  
 
    [section "Education" [icon "fas" "fa-graduation-cap"]
     [entry
@@ -208,10 +212,31 @@ documentation of the Ocsigen project."]]]
    [section "Skills" [icon "fas fa-toolbox"]
     [skillset @skills]]
 
-   [section "Miscellaneous" [icon "fas" "fa-rocket"]
-    [hlist "25%"
-     "a" "b"]]
-   ])
+   [section "Some selected projects" [icon "fas fa-tools"]
+    [entry
+     :picture "tree.jpg"
+     :title [:code {:style {:font-size "120%"}} "cl-lsystem"]
+     :link "https://github.com/leovalais/cl-lsystem"
+     :tags (list github-tag
+                 [code-tag "Common Lisp"]
+                 [agenda-tag "April 2018"])
+     :content "L-system (fractal description language) interpretor with a custom, Turing-complete,
+fully extensible DSL written in Common Lisp. Supports 2D and 3D L-systems."]
+    [entry
+     :picture "sting.png"
+     :title [:code {:style {:font-size "120%"}} "sting"]
+     :link "https://github.com/leovalais/sting"
+     :tags (list wip-tag
+                 github-tag
+                 [code-tag "Common Lisp"]
+                 [agenda-tag "August 2018-Now"])
+     :content "A unit testing library for Common Lisp handling definition and parallel execution.
+It also provides an TDD-oriented Emacs mode for managing and introspecting tests."]]
+
+   [:div {:style {:float :right :font-size "60%" :color "#777"}}
+    "An interactive version of this résumé is available at "
+    [:a {:href "https://leovalais.netlify.com"} "leovalais.netlify.com"]
+    "."] ])
 
 
 (defn mount-root []

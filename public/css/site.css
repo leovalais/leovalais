@@ -44,6 +44,10 @@ body {
     text-decoration: underline;
 }
 
+section:last-of-type {
+    margin-bottom: 0px !important;
+}
+
 .entry .content .description {
     font-size: 90%;
 }
@@ -69,6 +73,7 @@ body {
 
 a {
     text-decoration: none;
+    color: #333;
 }
 
 a:hover {
