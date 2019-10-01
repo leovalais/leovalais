@@ -173,6 +173,12 @@
                  [agenda-tag "April 1, 2019"])
      :content [:p "hello"]]
     [entry
+     :picture "acu.png"
+     :title "Teaching assistant C/Unix/C++/Java/SQL"
+     :tags (list [place-tag "Le Kremlin-Bicêtre"]
+                 [agenda-tag "January-December 2019"])
+     :content "TPAS"]
+    [entry
      :picture "https://www.besport.com/images/be-red.svg"
      :title "Dev. internship at BeSport"
      :link "https://european-lisp-symposium.org/2019/index.html"
