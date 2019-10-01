@@ -206,7 +206,7 @@ in several languages and technologies."]
                  [place-tag "Paris"]
                  [agenda-tag "September-December, 2018"])
      :content [:p "Modernization and deployement of a static website generator written in OCaml. "
-"Actually used to generate the website " [:a {:href "https://ocsigen.org/"} "ocsigen.org"] " holding the
+"Currently used to generate the website " [:a {:href "https://ocsigen.org/"} "ocsigen.org"] " holding the
 documentation of the Ocsigen project."]]]
 
    [section "Skills" [icon "fas fa-toolbox"]
