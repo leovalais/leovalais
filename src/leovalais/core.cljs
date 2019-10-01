@@ -12,14 +12,15 @@
                :accent true}
               {:skill "Haskell"
                :accent true}
-              {:skill "Python"}
-              {:skill "Machine Learing"}
+              {:skill "AI/ML"}
               {:skill "Image Processing"}
+              {:skill "Distributed Computing"}
+              {:skill "HPC"}
+              {:skill "Python"}
               {:skill "Rust"}
               {:skill "Java"}
               {:skill "C++"}
               {:skill "C"}
-              {:skill "RDBMS"}
               {:skill "JavaScript"}
               {:skill "HTML5/CSS3"}]))
 
@@ -50,12 +51,12 @@
   (let [style {:display :inline-block
                :color (if accent "white" skill-color)
                :background-color (if accent skill-accent-color "white")
-               :font-size "0.75em"
+               :font-size "0.65em"
                :font-weight (if accent :bold :normal)
-               :margin-left "10px"
+               :margin-left "5px"
                :margin-bottom "3px"
-               :padding "1px 10px"
-               :border-width "2px"
+               :padding "0px 10px"
+               :border-width "1.5px"
                :border-style :solid
                :border-color (if accent skill-accent-color skill-color)
                :border-radius "20px"}]
@@ -64,10 +65,16 @@
       [:span.skill {:style style} skill])))
 
 (defn skillset [skills]
-  [:div.skillset {:style {:width "90%"
-                          :margin "25px auto"
+  [:div.skillset {:style {:width "100%"
+                          :margin "20px auto"
                           :text-align :center}}
    (map skill skills)])
+
+(defn hlist [min-width & items]
+  [:ul.hlist
+   (map (fn [i] [:li.hlist-item {:style {:float :left
+                                         :min-width min-width}} i])
+        items)])
 
 (defn tag [icon text]
   [:span.tag {:style {:display "inline-block"
@@ -92,7 +99,7 @@
                           :flex-grow 1
                           :flex-direction :column}}
     [:div.heading {:style {:display :flex
-                           :width "auto"}}
+                           :width :auto}}
      [:h3 {:style {:margin 0}} [:a {:href link} title]]
      [:div.tags {:style {:display :flex
                          :justify-content :flex-end
@@ -111,12 +118,16 @@
     content]])
 
 
+(defn emph [& things]
+  [:span.emph things])
+
 (def lrde-logo "https://www.lrde.epita.fr/skins/common/images/logo.png")
 (defn cv-view []
   [:div.cv
    [:div.heading {:style {:display :flex}}
-    [:h1 {:style {:margin "25px 0px"
-                  :flex-grow 0}} "Léo VALAIS"]
+    [:h1 {:style {:margin "15px 0px"
+                  :font-variant :small-caps
+                  :flex-grow 0}} "Léo Valais"]
     [:div.badges {:style {:display :flex
                           :align-items :center
                           :justify-content :flex-end
@@ -133,11 +144,9 @@
     [contact [icon "fab" "fa-linkedin"] "leovalais" "https://www.linkedin.com/in/leovalais/"] contact-separator
     [contact [icon "fab" "fa-twitter"] "_letrov" "https://twitter.com/_letrov"] contact-separator
     [contact [icon "fas" "fa-globe-europe"] "leovalais.netlify.com" "https://leovalais.netlify.com"]]
-   ;; [:h2 "Computer Science research & IT engineering (graduating 2020)"]
-   ;; [:p "Looking for a " [:em "6-month Spring internship"] " in "
-   ;;  [:strong "Lisp/Clojure"] " or "
-   ;;  [:strong "image processing"] "."]
-   [:p "Some introduction"]
+   [:p.abstract {:style {:margin 0 :margin-top 5}}
+    "Looking for a six-month internship in " [emph "image processing"] ", " [emph "machine learning"]
+    " or about " [emph "Lisp languages"] " such as Common Lisp or Clojure."]
 
    [section "Education" [icon "fas" "fa-graduation-cap"]
     [entry
@@ -163,9 +172,11 @@
      :link "https://www.lrde.epita.fr/wiki/Publications/valais.19.els"
      :tags (list [code-tag "Common Lisp"]
                  [article-tag [:a {:href "https://european-lisp-symposium.org/2019/index.html"}
-                               "Article"]]
+                               "In proceedings"]]
                  [agenda-tag "April 1, 2019"])
-     :content [:p "“Implementing Baker’s SUBTYPEP Decision Procedure”, based on my research work at LRDE."]]]
+     :content [:p "“Implementing Baker’s " [:code "SUBTYPEP"] " Decision Procedure”, based on my research
+work at LRDE. Presentation of an alternative implementation for " [:code "SUBTYPEP"] ", a standard
+Common Lisp predicate."]]]
 
    [section "Experience" [icon "fas" "fa-user-tie"]
     [entry
@@ -174,13 +185,15 @@
      :link "https://european-lisp-symposium.org/2019/index.html"
      :tags (list [place-tag "Genova, Italy"]
                  [agenda-tag "April 1, 2019"])
-     :content [:p "hello"]]
+     :content [:p "Presentation of my research work at LRDE, described in my paper “Implementing Baker’s "
+[:code "SUBTYPEP"] " Decision Procedure”. "]]
     [entry
      :picture "acu.png"
-     :title "Teaching assistant C/Unix/C++/Java/SQL"
+     :title "Teaching assistant C • Unix • C++ • Java • SQL"
      :tags (list [place-tag "Le Kremlin-Bicêtre"]
                  [agenda-tag "January-December 2019"])
-     :content "TPAS"]
+     :content "Teaching assistant for third year students. Reponsible of tutorials, workshops and projects
+in several languages and technologies."]
     [entry
      :picture "https://www.besport.com/images/be-red.svg"
      :title "Dev. internship at BeSport"
@@ -188,23 +201,16 @@
      :tags (list [code-tag "OCaml"]
                  [place-tag "Paris"]
                  [agenda-tag "September-December, 2018"])
-     :content [:p "hello"]]
-    [entry
-     :picture lrde-logo
-     :title "Summer internship at LRDE"
-     :link "https://european-lisp-symposium.org/2019/index.html"
-     :tags (list [code-tag "Common Lisp"]
-                 [place-tag "Le Kremlin-Bicêtre"]
-                 [agenda-tag "May-July, 2017"])
-     :content [:p "hello"]]]
+     :content [:p "Modernization and deployement of a static website generator written in OCaml. "
+"Actually used to generate the website " [:a {:href "https://ocsigen.org/"} "ocsigen.org"] " holding the
+documentation of the Ocsigen project."]]]
 
    [section "Skills" [icon "fas fa-toolbox"]
     [skillset @skills]]
 
    [section "Miscellaneous" [icon "fas" "fa-rocket"]
-    [:ul
-     [:li "a"]
-     [:li "b"]]]
+    [hlist "25%"
+     "a" "b"]]
    ])
 
 

@@ -40,6 +40,11 @@ body {
     font-size: 0.9em;
 }
 
+.abstract .emph {
+    color: #111;
+    text-decoration: underline;
+}
+
 .entry .content .description {
     font-size: 0.8em;
 }
@@ -58,15 +63,13 @@ body {
     margin-left: 10px;
 }
 
-.left-panel {
-    color: #FFF;
-    padding: 20px 0px;
-    background-color: #333
+.description a {
+    font-style: italic;
+    color: #222;
 }
 
 a {
     text-decoration: none;
-    color: #09f;
 }
 
 a:hover {
