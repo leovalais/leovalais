@@ -51,7 +51,7 @@
   (let [style {:display :inline-block
                :color (if accent "white" skill-color)
                :background-color (if accent skill-accent-color "white")
-               :font-size "0.65em"
+               :font-size "75%"
                :font-weight (if accent :bold :normal)
                :margin-left "5px"
                :margin-bottom "3px"

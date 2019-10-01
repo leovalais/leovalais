@@ -1,7 +1,6 @@
 body {
     font-family: 'Fira Sans', 'Helvetica Neue', Verdana, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
-    font-size: 1.125em;
     color: #333;
     line-height: 1.5em;
     -webkit-print-color-adjust: exact;
@@ -29,15 +28,15 @@ body {
 }
 
 .cv h1 {
-    font-size: 2em;
+    font-size: 200%;
 }
 
 .cv h2 {
-    font-size: 1.25em;
+    font-size: 125%;
 }
 
 .cv h3 {
-    font-size: 0.9em;
+    font-size: 100%;
 }
 
 .abstract .emph {
@@ -46,7 +45,7 @@ body {
 }
 
 .entry .content .description {
-    font-size: 0.8em;
+    font-size: 90%;
 }
 .entry .content .description p:first-child {
     margin: 0;
