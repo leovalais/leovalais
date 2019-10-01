@@ -102,7 +102,9 @@
 
 (defn section [title icon & content]
   [:section {:style {:margin-bottom 25}}
-   [:h2 {:style {:margin-bottom 0}}
+   [:h2 {:style {:margin-bottom 0
+                 :padding-bottom 2
+                 :border-bottom "1px solid #DDD"}}
     [:span {:style {:margin-right "8px"}} icon]
     title]
    [:div.content {:style {:margin-left "10px"}}
