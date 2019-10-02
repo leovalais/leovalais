@@ -125,30 +125,34 @@
 (defn emph [& things]
   [:span.emph things])
 
+(defn flag [country]
+  [:img {:src (str country ".png")
+         :width "11.667mm"}])
+
 (def lrde-logo "https://www.lrde.epita.fr/skins/common/images/logo.png")
 (defn cv-view []
   [:div.cv
    [:div.heading {:style {:display :flex}}
     [:h1 {:style {:margin "15px 0px"
                   :font-variant :small-caps
-                  :flex-grow 0}} "Léo Valais"]
+                  :flex-grow 0
+                  :min-width "30%"}} "Léo Valais"]
     [:div.badges {:style {:display :flex
                           :align-items :center
                           :justify-content :flex-end
                           :flex-grow 1
                           :color "#777"}}
-     (for [flag ["france" "uk" "spain"]]
-       [:img {:src (str flag ".png")
-              :width "40mm"
-              :style {:margin-right "5px"}}])]]
-   [:div.contact {:style {:width "100%" :margin "auto" :text-align "center"}}
-    [contact [icon "fas" "fa-envelope"] "leo.valais97@gmail.com" "mailto:leo.valais97@gmail.com"] contact-separator
-    [contact [icon "fas" "fa-phone-alt"] "+33 7 60 06 39 14" "tel:+33760063914"] contact-separator
-    [contact [icon "fab" "fa-github-alt"] "leovalais" "https://github.com/leovalais"] contact-separator
-    [contact [icon "fab" "fa-linkedin"] "leovalais" "https://www.linkedin.com/in/leovalais/"] contact-separator
-    [contact [icon "fab" "fa-twitter"] "_letrov" "https://twitter.com/_letrov"] contact-separator
-    [contact [icon "fas" "fa-globe-europe"] "leovalais.netlify.com" "https://leovalais.netlify.com"]]
-   [:p.abstract {:style {:margin 0 :margin-top 5}}
+     [:div.contact {:style {:width "100%" :margin "auto" :text-align "center"}}
+      [contact [icon "fas" "fa-envelope"] "leo.valais97@gmail.com" "mailto:leo.valais97@gmail.com"] contact-separator
+      [contact [icon "fas" "fa-phone-alt"] "+33 7 60 06 39 14" "tel:+33760063914"] contact-separator
+      [contact [icon "fab" "fa-github-alt"] "leovalais" "https://github.com/leovalais"] contact-separator
+      [contact [icon "fab" "fa-linkedin"] "leovalais" "https://www.linkedin.com/in/leovalais/"] contact-separator
+      [contact [icon "fab" "fa-twitter"] "_letrov" "https://twitter.com/_letrov"] contact-separator
+      [contact [icon "fas" "fa-globe-europe"] "leovalais.netlify.com" "https://leovalais.netlify.com"] contact-separator
+      [contact [flag "france"] "Native" "#"] contact-separator
+      [contact [flag "uk"] "TOEIC & Semester abroad" "#"]]]]
+
+   [:p.abstract {:style {:margin 0 :margin-top 5 :font-size "120%"}}
     "Looking for a six-month internship in " [emph "image processing"] ", " [emph "machine learning"]
     " or about " [emph "Lisp languages"] "."]
   
@@ -234,11 +238,11 @@ fully extensible DSL written in Common Lisp. Supports 2D and 3D L-systems."]
      :content "A unit testing library for Common Lisp handling definition and parallel execution.
 It also provides an TDD-oriented Emacs mode for managing and introspecting tests."]]
 
-   [:div {:style {:float :right :font-size "60%" :color "#777"}}
+   [:footer {:style {:position :absolute :bottom 0 :right 20 :font-size "60%" :color "#777"}}
     "Made with ClojureScript and Reagent. "
     "An interactive version of this résumé is available at "
     [:a {:href "https://leovalais.netlify.com"} "leovalais.netlify.com"]
-    "."] ])
+    "."]])
 
 
 (defn mount-root []
