@@ -190,18 +190,18 @@ Common Lisp predicate. Involves type theory, type representation and performance
      :link "https://european-lisp-symposium.org/2019/index.html"
      :tags (list [place-tag "Genova, Italy"]
                  [agenda-tag "April 1, 2019"])
-     :content [:p "Presentation of my research work at LRDE, described in my paper “Implementing Baker’s "
+     :content [:p "Presentation of my research work at LRDE, described in “Implementing Baker’s "
 [:code "SUBTYPEP"] " Decision Procedure”. "]]
     [entry
      :picture "acu.png"
      :title "Teaching assistant C • Unix • C++ • Java • SQL"
      :tags (list [place-tag "Le Kremlin-Bicêtre"]
                  [agenda-tag "January-December 2019"])
-     :content "Teaching assistant for third year students. Reponsible of tutorials, workshops and projects
-in several languages and technologies."]
+     :content "Teaching assistant for third year students. Reponsible of tutorials, workshops and
+school projects in several languages and technologies."]
     [entry
      :picture "https://www.besport.com/images/be-red.svg"
-     :title "Dev. internship at BeSport"
+     :title "Software development internship at BeSport"
      :link "https://european-lisp-symposium.org/2019/index.html"
      :tags (list [code-tag "OCaml"]
                  [place-tag "Paris"]
@@ -235,6 +235,7 @@ fully extensible DSL written in Common Lisp. Supports 2D and 3D L-systems."]
 It also provides an TDD-oriented Emacs mode for managing and introspecting tests."]]
 
    [:div {:style {:float :right :font-size "60%" :color "#777"}}
+    "Made with ClojureScript and Reagent. "
     "An interactive version of this résumé is available at "
     [:a {:href "https://leovalais.netlify.com"} "leovalais.netlify.com"]
     "."] ])
