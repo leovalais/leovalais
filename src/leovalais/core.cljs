@@ -4,20 +4,17 @@
             [goog.string.format]))
 
 (def skills (r/atom
-             [{:skill "Common Lisp"
-               :accent true}
-              {:skill "Clojure(Script)"
-               :accent true}
-              {:skill "OCaml"
-               :accent true}
+             [{:skill "Common Lisp"}
+              {:skill "Clojure(Script)"}
+              {:skill "OCaml"}
               {:skill "Haskell"
-               :accent true}
+               :accent false}
               {:skill "AI/ML"}
               {:skill "Image Processing"}
+              {:skill "Image Synthesis"}
               {:skill "Distributed Computing"}
               {:skill "HPC"}
-              {:skill "Language theory"
-               :accent true}
+              {:skill "Language theory"}
               {:skill "Python"}
               {:skill "Rust"}
               {:skill "Java"}
@@ -90,6 +87,7 @@
 (def article-tag (partial tag  [icon "far" "fa-newspaper"]))
 (def code-tag (partial tag  [icon "fas" "fa-laptop-code"]))
 (def github-tag (tag [icon "fab" "fa-github"] "Hosted on GitHub"))
+(def gitlab-tag (tag [icon "fab" "fa-gitlab"] "Hosted on GitLab"))
 (def wip-tag (tag [icon "fas" "fa-hard-hat"] "Work in progress"))
 
 (defn entry [& {:keys [picture title tags content link]}]
@@ -172,7 +170,8 @@
      :title [:span "ÉPITA" " " [:em "(graduating 2020)"]]
      :link "https://www.epita.fr/nos-formations/diplome-ingenieur/cycle-ingenieur/les-majeures/#majeure-IMAGE"
      :tags (list [place-tag "Le Kremlin-Bicêtre"] [agenda-tag "2015-2020"])
-     :content [:p {:style {:margin 0}} "Computer Science engineering school. Specialization in image processing and machine learning."]]]
+     :content [:p {:style {:margin 0}} "Computer Science engineering school. Specialization in image processing and machine learning.
+Experience in raytracing, distributed computing, GPGPU computing, medical imagery, deep learning, etc."]]]
 
    [section "Publications" [icon "fas" "fa-scroll"]
     [entry
@@ -228,15 +227,13 @@ documentation of the Ocsigen project."]]]
      :content "L-system (fractal description language) interpretor with a custom, Turing-complete,
 fully extensible DSL written in Common Lisp. Supports 2D and 3D L-systems."]
     [entry
-     :picture "sting.png"
-     :title [:code {:style {:font-size "120%"}} "sting"]
-     :link "https://github.com/leovalais/sting"
-     :tags (list wip-tag
-                 github-tag
-                 [code-tag "Common Lisp"]
-                 [agenda-tag "August 2018-Now"])
-     :content "A unit testing library for Common Lisp handling definition and parallel execution.
-It also provides an TDD-oriented Emacs mode for managing and introspecting tests."]]
+     :picture "abeille.jpg"
+     :title [:code {:style {:font-size "120%"}} "bee-wing-intersection"]
+     :link "#"
+     :tags (list gitlab-tag
+                 [code-tag "Pythton/OpenCV+Scikit Image"]
+                 [agenda-tag "May-June 2019"])
+     :content "Automatic detection process of bee wings' vein intersection."]]
 
    [:footer {:style {:position :absolute :bottom 0 :right 20 :font-size "60%" :color "#777"}}
     "Made with ClojureScript and Reagent. "
