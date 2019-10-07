@@ -20,8 +20,7 @@
               {:skill "Java"}
               {:skill "C++"}
               {:skill "C"}
-              {:skill "JavaScript"}
-              {:skill "HTML5/CSS3"}]))
+              {:skill "JavaScript"}]))
 
 ;; -------------------------
 ;; Views
