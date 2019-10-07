@@ -170,7 +170,7 @@
      :link "https://www.epita.fr/nos-formations/diplome-ingenieur/cycle-ingenieur/les-majeures/#majeure-IMAGE"
      :tags (list [place-tag "Le Kremlin-Bicêtre"] [agenda-tag "2015-2020"])
      :content [:p {:style {:margin 0}} "Computer Science engineering school. Specialization in image processing and machine learning.
-Experience in raytracing, distributed computing, GPGPU computing, medical imagery, deep learning, etc."]]]
+Experience in raytracing, distributed computing, GPGPU computing, medical imaging, deep learning, etc."]]]
 
    [section "Publications" [icon "fas" "fa-scroll"]
     [entry
@@ -226,13 +226,12 @@ documentation of the Ocsigen project."]]]
      :content "L-system (fractal description language) interpretor with a custom, Turing-complete,
 fully extensible DSL written in Common Lisp. Supports 2D and 3D L-systems."]
     [entry
-     :picture "abeille.jpg"
-     :title [:code {:style {:font-size "120%"}} "bee-wing-intersection"]
-     :link "#"
-     :tags (list gitlab-tag
-                 [code-tag "Pythton/OpenCV+Scikit Image"]
+     :picture "xgboost.png"
+     :title [:code {:style {:font-size "120%"}} "melanoma-detection"]
+     :link "imed.pdf"
+     :tags (list [code-tag "Python"]
                  [agenda-tag "May-June 2019"])
-     :content "Automatic detection process of bee wings' vein intersection."]]
+     :content "Automatic melanoma detection method written in Python. Uses scikit-image, scikit-learn and the XGBoost model."]]
 
    [:footer {:style {:position :absolute :bottom 0 :right 20 :font-size "60%" :color "#777"}}
     "Made with ClojureScript and Reagent. "
