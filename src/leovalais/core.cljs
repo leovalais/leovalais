@@ -158,7 +158,7 @@
     [entry
      :picture lrde-logo
      :title "LRDE"
-     :link "https://www.epita.fr/nos-formations/diplome-ingenieur/cycle-ingenieur/les-majeures/"
+     :link "https://www.lrde.epita.fr/"
      :tags (list [code-tag "Common Lisp"]
                  [place-tag "Le Kremlin-Bicêtre"]
                  [agenda-tag "2017-2020"])
