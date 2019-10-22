@@ -145,7 +145,7 @@
       [contact [icon "fab" "fa-github-alt"] "leovalais" "https://github.com/leovalais"] contact-separator
       [contact [icon "fab" "fa-linkedin"] "leovalais" "https://www.linkedin.com/in/leovalais/"] contact-separator
       [contact [icon "fab" "fa-twitter"] "_letrov" "https://twitter.com/_letrov"] contact-separator
-      [contact [icon "fas" "fa-globe-europe"] "leovalais.netlify.com" "https://leovalais.netlify.com"] contact-separator
+      [contact [icon "fas" "fa-car"] "Driving license" "#"] contact-separator
       [contact [flag "france"] "Native" "#"] contact-separator
       [contact [flag "uk"] "TOEIC & Semester abroad" "#"]]]]
 
