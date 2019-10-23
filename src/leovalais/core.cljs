@@ -150,8 +150,8 @@
       [contact [flag "uk"] "TOEIC & Semester abroad" "#"]]]]
 
    [:p.abstract {:style {:margin 0 :margin-top 5 :font-size "120%"}}
-    "Looking for a six-month internship in " [emph "image processing"] ", " [emph "machine learning"]
-    " or about " [emph "Lisp languages"] "."]
+    "Looking for a six-month internship — starting late February, early March, 2020 — in " [emph "image processing"] ", " [emph "machine learning"]
+    " or about " [emph "Lisp languages"] ". J-1 visa candidate."]
   
 
    [section "Education" [icon "fas" "fa-graduation-cap"]
