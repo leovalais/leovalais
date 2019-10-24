@@ -223,7 +223,7 @@ documentation of the Ocsigen project."]]]
      :tags (list github-tag
                  [code-tag "Common Lisp"]
                  [agenda-tag "April 2018"])
-     :content "L-system (fractal description language) interpretor with a custom, Turing-complete,
+     :content "L-system (fractal description language) interpreter with a custom, Turing-complete,
 fully extensible DSL written in Common Lisp. Supports 2D and 3D L-systems."]
     [entry
      :picture "xgboost.png"
