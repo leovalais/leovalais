@@ -204,7 +204,7 @@ school projects in several languages and technologies."]
     [entry
      :picture "https://www.besport.com/images/be-red.svg"
      :title "Software development internship at BeSport"
-     :link "https://european-lisp-symposium.org/2019/index.html"
+     :link "https://github.com/ocsigen/html_of_wiki"
      :tags (list [code-tag "OCaml"]
                  [place-tag "Paris"]
                  [agenda-tag "September-December, 2018"])
