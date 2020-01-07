@@ -199,7 +199,7 @@ Common Lisp predicate. Involves type theory, type representation and performance
      :title "Teaching assistant C • Unix • C++ • Java • SQL"
      :tags (list [place-tag "Le Kremlin-Bicêtre"]
                  [agenda-tag "January-December 2019"])
-     :content "Teaching assistant for third year students. Reponsible of tutorials, workshops and
+     :content "Teaching assistant for third-year students. Responsible for tutorials, workshops and
 school projects in several languages and technologies."]
     [entry
      :picture "https://www.besport.com/images/be-red.svg"
