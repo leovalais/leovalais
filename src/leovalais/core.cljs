@@ -208,7 +208,7 @@ school projects in several languages and technologies."]
      :tags (list [code-tag "OCaml"]
                  [place-tag "Paris"]
                  [agenda-tag "September-December, 2018"])
-     :content [:p "Modernization and deployement of a static website generator written in OCaml. "
+     :content [:p "Modernization and deployment of a static website generator written in OCaml. "
 "Currently used to generate the website " [:a {:href "https://ocsigen.org/"} "ocsigen.org"] " holding the
 documentation of the Ocsigen project."]]]
 
