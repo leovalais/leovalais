@@ -163,7 +163,7 @@
                  [place-tag "Le Kremlin-Bicêtre"]
                  [agenda-tag "2017-2020"])
      :content [:p {:style {:margin 0}}
-               "ÉPITA's research and developement laboratory. Research specialization and a project supervized by laboratory's full-time researchers."]]
+               "ÉPITA's research and devlopement laboratory. Research specialisation and a project supervised by laboratory's full-time researchers."]]
     [entry
      :picture "http://convention.epitanime.com/wp-content/uploads/2017/02/epita.jpg"
      :title [:span "ÉPITA" " " [:em "(graduating 2020)"]]
