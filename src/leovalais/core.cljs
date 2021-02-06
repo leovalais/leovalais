@@ -129,7 +129,7 @@
          :width "11.667mm"}])
 
 (def lrde-logo "lrde.png")
-(def epita-logo "epita.png")
+(def epita-logo "epita.jpg")
 (defn cv-view []
   [:div.cv
    [:div.heading {:style {:display :flex}}
