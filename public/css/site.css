@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
 
 body {
-    font-family: 'Fira Sans', 'Helvetica Neue', Verdana, Helvetica, Arial, sans-serif;
+    font-family: 'Helvetica Neue', 'Fira Sans', Verdana, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     color: #333;
     line-height: 1.5em;
