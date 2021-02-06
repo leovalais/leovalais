@@ -4,23 +4,23 @@
             [goog.string.format]))
 
 (def skills (r/atom
-             [{:skill "Common Lisp"}
+             [{:skill "C++" :accent true}
+              {:skill "Python" :accent true}
+              {:skill "C"}
+              {:skill "C# .NET"}
+              {:skill "Java"}
+              {:skill "Common Lisp" :accent true}
               {:skill "Clojure(Script)"}
               {:skill "OCaml"}
-              {:skill "Haskell"
-               :accent false}
-              {:skill "AI/ML"}
-              {:skill "Image Processing"}
+              {:skill "LaTeX"}
+              {:skill "Web"}
+              {:skill "Image Processing" :accent true}
               {:skill "Image Synthesis"}
-              {:skill "Distributed Computing"}
-              {:skill "HPC"}
-              {:skill "Language theory"}
-              {:skill "Python"}
-              {:skill "Rust"}
-              {:skill "Java"}
-              {:skill "C++"}
-              {:skill "C"}
-              {:skill "JavaScript"}]))
+              {:skill "Machine Learning"}
+              {:skill "Unity"}
+              {:skill "Docker"}
+              {:skill "Linux"}
+              {:skill "macOS"}]))
 
 ;; -------------------------
 ;; Views
@@ -42,8 +42,10 @@
                                                          :color "#777"}}
                         "•"])
 
-(def skill-color "rgb(88, 86, 214)")
-(def skill-accent-color "rgb(125, 122, 255)")
+;; (def skill-color "rgb(88, 86, 214)")
+;; (def skill-accent-color "rgb(125, 122, 255)")
+(def skill-color "rgb(20, 20, 20)")
+(def skill-accent-color "rgb(40, 40, 40)")
 
 (defn skill [{:keys [skill accent]}]
   (let [style {:display :inline-block
@@ -126,7 +128,8 @@
   [:img {:src (str country ".png")
          :width "11.667mm"}])
 
-(def lrde-logo "https://www.lrde.epita.fr/skins/common/images/logo.png")
+(def lrde-logo "lrde.png")
+(def epita-logo "epita.png")
 (defn cv-view []
   [:div.cv
    [:div.heading {:style {:display :flex}}
@@ -144,17 +147,24 @@
       [contact [icon "fas" "fa-phone-alt"] "+33 7 60 06 39 14" "tel:+33760063914"] contact-separator
       [contact [icon "fab" "fa-github-alt"] "leovalais" "https://github.com/leovalais"] contact-separator
       [contact [icon "fab" "fa-linkedin"] "leovalais" "https://www.linkedin.com/in/leovalais/"] contact-separator
-      [contact [icon "fab" "fa-twitter"] "_letrov" "https://twitter.com/_letrov"] contact-separator
       [contact [icon "fas" "fa-car"] "Driving licence" "#"] contact-separator
       [contact [flag "france"] "Native" "#"] contact-separator
       [contact [flag "uk"] "TOEIC & Semester abroad" "#"]]]]
 
-   [:p.abstract {:style {:margin 0 :margin-top 5 :font-size "120%"}}
-    "Looking for a six-month internship — starting late February, early March, 2020 — in " [emph "image processing"] ", " [emph "machine learning"]
-    " or about " [emph "Lisp languages"] ". J-1 visa candidate."]
+   ;; [:p.abstract {:style {:margin 0 :margin-top 5 :font-size "120%"}}
+   ;;  "Looking for a six-month internship — starting late February, early March, 2020 — in " [emph "image processing"] ", " [emph "machine learning"]
+   ;;  " or about " [emph "Lisp languages"] ". J-1 visa candidate."]
   
 
    [section "Education" [icon "fas" "fa-graduation-cap"]
+    [entry
+     :picture epita-logo
+     :title [:span "EPITA / CTI"]
+     :link "https://www.epita.fr/nos-formations/diplome-ingenieur/cycle-ingenieur/les-majeures/#majeure-IMAGE"
+     :tags (list [place-tag "Le Kremlin-Bicêtre"] [agenda-tag "2015-2020"])
+     :content [:p {:style {:margin 0}}
+               "Computer Science engineering school. " [emph "Specialization in image processing and machine learning."]
+               " Experience in raytracing, distributed computing, GPU computing, medical imaging, deep learning, real-time graphics, signal processing, algorithmic complexity, scientifc Python, etc."]]
     [entry
      :picture lrde-logo
      :title "LRDE"
@@ -163,18 +173,12 @@
                  [place-tag "Le Kremlin-Bicêtre"]
                  [agenda-tag "2017-2020"])
      :content [:p {:style {:margin 0}}
-               "ÉPITA's research and development laboratory. Second specialisation in research and a project supervised by laboratory's full-time researchers."]]
-    [entry
-     :picture "http://convention.epitanime.com/wp-content/uploads/2017/02/epita.jpg"
-     :title [:span "ÉPITA" " " [:em "(graduating 2020)"]]
-     :link "https://www.epita.fr/nos-formations/diplome-ingenieur/cycle-ingenieur/les-majeures/#majeure-IMAGE"
-     :tags (list [place-tag "Le Kremlin-Bicêtre"] [agenda-tag "2015-2020"])
-     :content [:p {:style {:margin 0}} "Computer Science engineering school. Specialization in image processing and machine learning.
-Experience in raytracing, distributed computing, GPGPU computing, medical imaging, deep learning, etc."]]]
+               "EPITA's research and development laboratory. "
+               [emph "Second specialisation in research in computer science"] " and a project supervised by laboratory's full-time researchers."]]]
 
    [section "Publications" [icon "fas" "fa-scroll"]
     [entry
-     :picture lrde-logo
+     :picture "els.png"
      :title "European Lisp Symposium 2019"
      :link "https://www.lrde.epita.fr/wiki/Publications/valais.19.els"
      :tags (list [code-tag "Common Lisp"]
@@ -187,19 +191,21 @@ Common Lisp predicate. Involves type theory, type representation and performance
 
    [section "Experience" [icon "fas" "fa-user-tie"]
     [entry
-     :picture "https://european-lisp-symposium.org/static/favicon.png"
-     :title "Talk at European Lisp Symposium 2019"
-     :link "https://european-lisp-symposium.org/2019/index.html"
-     :tags (list [place-tag "Genova, Italy"]
-                 [agenda-tag "April 1, 2019"])
-     :content [:p "Presentation of my research work at LRDE, described in “Implementing Baker’s "
-[:code "SUBTYPEP"] " Decision Procedure”. "]]
+     :picture "https://media.glassdoor.com/sqll/3059/airbus-group-squarelogo-1484558058652.png"
+     :title [:span "Satellite image processing internship at" [:br] "Airbus Defence & Space"]
+     :tags (list [code-tag "C++"]
+                 [place-tag "Sophia Antipolis"]
+                 [agenda-tag "June-September 2020"])
+     :content [:p
+               "Implementation and improvement of a cloud altitude estimation method. "
+               "Based on stereovision by using the physical gap between optic sensors on PLEIADES satellites. "
+               "Involves stereocorelation, epipolar geometry, Digital Elevation Models, image processing and denoising methods, prototyping with Python, etc."]]
     [entry
-     :picture "acu.png"
+     :picture epita-logo
      :title "Teaching assistant C • Unix • C++ • Java • SQL"
      :tags (list [place-tag "Le Kremlin-Bicêtre"]
                  [agenda-tag "January-December 2019"])
-     :content "Teaching assistant for third-year students. Responsible for tutorials, workshops and
+     :content "Teaching assistant for third-year EPITA students. Responsible for tutorials, workshops and
 school projects in several languages and technologies."]
     [entry
      :picture "https://www.besport.com/images/be-red.svg"
@@ -217,21 +223,16 @@ documentation of the Ocsigen project."]]]
 
    [section "Some selected projects" [icon "fas fa-tools"]
     [entry
-     :picture "tree.jpg"
-     :title [:code {:style {:font-size "120%"}} "cl-lsystem"]
-     :link "https://github.com/leovalais/cl-lsystem"
-     :tags (list github-tag
-                 [code-tag "Common Lisp"]
-                 [agenda-tag "April 2018"])
-     :content "L-system (fractal description language) interpreter with a custom, Turing-complete,
-fully extensible DSL written in Common Lisp. Supports 2D and 3D L-systems."]
+     :picture "boat.jpg"
+     :title "Ship classification model"
+     :tags (list [code-tag "Python"] [code-tag "Keras"])
+     :content "Ship classification model based on Xception using Keras."]
     [entry
      :picture "xgboost.png"
-     :title [:code {:style {:font-size "120%"}} "melanoma-detection"]
+     :title "Melanoma detection model"
      :link "imed.pdf"
-     :tags (list [code-tag "Python"]
-                 [agenda-tag "May-June 2019"])
-     :content "Automatic melanoma detection method written in Python. Uses scikit-image, scikit-learn and the XGBoost model."]]
+     :tags (list [code-tag "Python"] [code-tag "xgboost"] [code-tag "scikit-image"])
+     :content "Automatic melanoma detection method written in Python. Uses scikit-learn and the XGBoost model."]]
 
    [:footer {:style {:position :absolute :bottom 0 :right 20 :font-size "60%" :color "#777"}}
     "Made with ClojureScript and Reagent. "
