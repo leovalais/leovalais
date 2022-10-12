@@ -5,16 +5,19 @@
 
 (def skills (r/atom
              [{:skill "C++" :accent true}
-              {:skill "Common Lisp" :accent true}
               {:skill "Python" :accent true}
+              {:skill "Common Lisp" :accent true}
               {:skill "Rust"}
               {:skill "Java"}
               {:skill "C"}
               {:skill "OCaml"}
               {:skill "Docker"}
-              {:skill "Image Processing" :accent true}
               {:skill "Linux"}
-              {:skill "macOS"}]))
+              {:skill "macOS"}
+              {:skill "Image Processing" :accent true}
+              {:skill "Software Design and Architecture"}
+              {:skill "CI/CD"}
+              {:skill "Agile Scrum"}]))
 
 ;; -------------------------
 ;; Views
