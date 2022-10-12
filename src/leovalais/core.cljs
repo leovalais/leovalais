@@ -11,6 +11,7 @@
               {:skill "Java"}
               {:skill "C"}
               {:skill "OCaml"}
+              {:skill "Haskell"}
               {:skill "Docker"}
               {:skill "Linux"}
               {:skill "macOS"}
