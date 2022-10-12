@@ -3,19 +3,23 @@
             [goog.string :as gstring]
             [goog.string.format]))
 
+(def languages (r/atom
+              [{:skill "C++" :accent true}
+               {:skill "Python" :accent true}
+               {:skill "Common Lisp" :accent true}
+               {:skill "Rust"}
+               {:skill "Java"}
+               {:skill "C"}
+               {:skill "OCaml"}
+               {:skill "Haskell"}]))
+
+(def systems (r/atom
+              [{:skill "Docker"}
+               {:skill "Linux"}
+               {:skill "macOS"}]))
+
 (def skills (r/atom
-             [{:skill "C++" :accent true}
-              {:skill "Python" :accent true}
-              {:skill "Common Lisp" :accent true}
-              {:skill "Rust"}
-              {:skill "Java"}
-              {:skill "C"}
-              {:skill "OCaml"}
-              {:skill "Haskell"}
-              {:skill "Docker"}
-              {:skill "Linux"}
-              {:skill "macOS"}
-              {:skill "Image Processing" :accent true}
+             [{:skill "Image Processing" :accent true}
               {:skill "Software Design and Architecture"}
               {:skill "CI/CD"}
               {:skill "Agile Scrum"}]))
@@ -187,6 +191,8 @@ work at LRDE. Presentation of an alternative implementation for " [:code "SUBTYP
 Common Lisp predicate. Involves type theory, type representation and performance concerns."]]]
 
    [section "Skills" [icon "fas fa-toolbox"]
+    [skillset @languages]
+    [skillset @systems]
     [skillset @skills]]
 
    [section "Experience" [icon "fas" "fa-user-tie"]
