@@ -53,12 +53,15 @@ section:last-of-type {
 .entry .content .description {
     font-size: 90%;
 }
+
 .entry .content .description p:first-child {
     margin: 0;
 }
+
 .entry a {
     color: #333;
 }
+
 .tag a {
     color: #777;
     text-decoration: underline;

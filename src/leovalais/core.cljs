@@ -5,20 +5,14 @@
 
 (def skills (r/atom
              [{:skill "C++" :accent true}
-              {:skill "Python" :accent true}
-              {:skill "C"}
-              {:skill "C# .NET"}
-              {:skill "Java"}
               {:skill "Common Lisp" :accent true}
-              {:skill "Clojure(Script)"}
+              {:skill "Python" :accent true}
+              {:skill "Rust"}
+              {:skill "Java"}
+              {:skill "C"}
               {:skill "OCaml"}
-              {:skill "LaTeX"}
-              {:skill "Web"}
-              {:skill "Image Processing" :accent true}
-              {:skill "Image Synthesis"}
-              {:skill "Machine Learning"}
-              {:skill "Unity"}
               {:skill "Docker"}
+              {:skill "Image Processing" :accent true}
               {:skill "Linux"}
               {:skill "macOS"}]))
 
@@ -42,8 +36,6 @@
                                                          :color "#777"}}
                         "•"])
 
-;; (def skill-color "rgb(88, 86, 214)")
-;; (def skill-accent-color "rgb(125, 122, 255)")
 (def skill-color "rgb(20, 20, 20)")
 (def skill-accent-color "rgb(40, 40, 40)")
 
@@ -78,7 +70,7 @@
 
 (defn tag [icon text]
   [:span.tag {:style {:display "inline-block"
-                      :font-size "75%"
+                      :font-size "11px"
                       :color "#777"}}
    [:span {:style {:margin-right "6px"}} icon]
    text])
@@ -90,6 +82,7 @@
 (def github-tag (tag [icon "fab" "fa-github"] "Hosted on GitHub"))
 (def gitlab-tag (tag [icon "fab" "fa-gitlab"] "Hosted on GitLab"))
 (def wip-tag (tag [icon "fas" "fa-hard-hat"] "Work in progress"))
+(def arch-tag (tag [icon "fas" "fa-drafting-compass"] "Design & Architecture"))
 
 (defn entry [& {:keys [picture title tags content link]}]
   [:div.entry {:style {:display :flex
@@ -150,10 +143,6 @@
       [contact [icon "fas" "fa-car"] "Driving licence" "#"] contact-separator
       [contact [flag "france"] "Native" "#"] contact-separator
       [contact [flag "uk"] "TOEIC & Semester abroad" "#"]]]]
-
-   ;; [:p.abstract {:style {:margin 0 :margin-top 5 :font-size "120%"}}
-   ;;  "Looking for a six-month internship — starting late February, early March, 2020 — in " [emph "image processing"] ", " [emph "machine learning"]
-   ;;  " or about " [emph "Lisp languages"] ". J-1 visa candidate."]
   
 
    [section "Education" [icon "fas" "fa-graduation-cap"]
@@ -161,7 +150,11 @@
      :picture epita-logo
      :title [:span "EPITA / CTI"]
      :link "https://www.epita.fr/nos-formations/diplome-ingenieur/cycle-ingenieur/les-majeures/#majeure-IMAGE"
-     :tags (list [place-tag "Le Kremlin-Bicêtre"] [agenda-tag "2015-2020"])
+     :tags (list [code-tag "C"] 
+                 [code-tag "C++17"]
+                 [code-tag "Java"]
+                 [place-tag "Le Kremlin-Bicêtre"] 
+                 [agenda-tag "2015-2020"])
      :content [:p {:style {:margin 0}}
                "Computer Science engineering school. " [emph "Specialization in image processing and machine learning."]
                " Experience in raytracing, distributed computing, GPU computing, medical imaging, deep learning, real-time graphics, signal processing, algorithmic complexity, scientifc Python, etc."]]
@@ -185,15 +178,30 @@
                  [article-tag [:a {:href "https://european-lisp-symposium.org/2019/index.html"}
                                "In proceedings"]]
                  [agenda-tag "April 1, 2019"])
-     :content [:p "“Implementing Baker’s " [:code "SUBTYPEP"] " Decision Procedure”, based on my research
+     :content [:p "\"Implementing Baker's " [:code "SUBTYPEP"] " Decision Procedure\", based on my research
 work at LRDE. Presentation of an alternative implementation for " [:code "SUBTYPEP"] ", a standard
 Common Lisp predicate. Involves type theory, type representation and performance concerns."]]]
 
+   [section "Skills" [icon "fas fa-toolbox"]
+    [skillset @skills]]
+
    [section "Experience" [icon "fas" "fa-user-tie"]
+    [entry
+     :picture "https://media.glassdoor.com/sqll/10358/thales-squarelogo-1454486545402.png"
+     :title [:span "Software Engineer at Thalès Services Numériques"]
+     :tags (list [code-tag "Python3"]
+                 arch-tag
+                 [agenda-tag "2021-2022"])
+     :content [:p
+               "Design, implementation and deployment of an automation software for a product's production chain. "
+               "Responsible for fetching measures and firmwares from multiple data sources "
+               "and arrange them to achieve a consistent state. "
+               "Then operates a JTAG hardware programmation DLL to interact with the equipement. "
+               "Built as an asynchronous Python 3.8 web-service with a PyQt GUI."]]
     [entry
      :picture "https://media.glassdoor.com/sqll/3059/airbus-group-squarelogo-1484558058652.png"
      :title [:span "Satellite image processing internship at" [:br] "Airbus Defence & Space"]
-     :tags (list [code-tag "C++"]
+     :tags (list [code-tag "C++17"]
                  [place-tag "Sophia Antipolis"]
                  [agenda-tag "June-September 2020"])
      :content [:p
@@ -202,13 +210,13 @@ Common Lisp predicate. Involves type theory, type representation and performance
                "Involves stereocorelation, epipolar geometry, Digital Elevation Models, image processing and denoising methods, prototyping with Python, etc."]]
     [entry
      :picture epita-logo
-     :title "Teaching assistant C • Unix • C++ • Java • SQL"
+     :title "Teaching assistant C/Unix/C++/Java/SQL"
      :tags (list [place-tag "Le Kremlin-Bicêtre"]
                  [agenda-tag "January-December 2019"])
      :content "Teaching assistant for third-year EPITA students. Responsible for tutorials, workshops and
 school projects in several languages and technologies."]
     [entry
-     :picture "https://www.besport.com/images/be-red.svg"
+     :picture "besport.png"
      :title "Software development internship at BeSport"
      :link "https://github.com/ocsigen/html_of_wiki"
      :tags (list [code-tag "OCaml"]
@@ -217,22 +225,6 @@ school projects in several languages and technologies."]
      :content [:p "Modernization and deployment of a static website generator written in OCaml. "
 "Currently used to generate the website " [:a {:href "https://ocsigen.org/"} "ocsigen.org"] " holding the
 documentation of the Ocsigen project."]]]
-
-   [section "Skills" [icon "fas fa-toolbox"]
-    [skillset @skills]]
-
-   [section "Some selected projects" [icon "fas fa-tools"]
-    [entry
-     :picture "boat.jpg"
-     :title "Ship classification model"
-     :tags (list [code-tag "Python"] [code-tag "Keras"])
-     :content "Ship classification model based on Xception using Keras."]
-    [entry
-     :picture "xgboost.png"
-     :title "Melanoma detection model"
-     :link "imed.pdf"
-     :tags (list [code-tag "Python"] [code-tag "xgboost"] [code-tag "scikit-image"])
-     :content "Automatic melanoma detection method written in Python. Uses scikit-learn and the XGBoost model."]]
 
    [:footer {:style {:position :absolute :bottom 0 :right 20 :font-size "60%" :color "#777"}}
     "Made with ClojureScript and Reagent. "
