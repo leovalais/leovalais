@@ -65,10 +65,7 @@
       [:span.skill {:style style} skill])))
 
 (defn skillset [skills]
-  [:div.skillset {:style {:width "100%"
-                          :margin "20px auto"
-                          :text-align :center}}
-   (map skill skills)])
+  [:div.skillset (map skill skills)])
 
 (defn hlist [min-width & items]
   [:ul.hlist

@@ -76,6 +76,16 @@ section:last-of-type {
     color: #222;
 }
 
+.skillset {
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.skillset:first-child {
+    margin-top: 10px;
+}
+
 a {
     text-decoration: none;
     color: #333;
