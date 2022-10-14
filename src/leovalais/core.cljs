@@ -220,7 +220,7 @@ Common Lisp predicate. Involves type theory, type representation and performance
      :title "Teaching assistant C/Unix/C++/Java/SQL"
      :tags (list [place-tag "Le Kremlin-Bicêtre"]
                  [agenda-tag "January-December 2019"])
-     :content "Teaching assistant for third-year EPITA students. Responsible for tutorials, workshops and
+     :content "Teaching assistant for third-year EPITA students. Responsible for tutorials, workshops, exams and
 school projects in several languages and technologies."]
     [entry
      :picture "besport.png"
