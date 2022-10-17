@@ -203,7 +203,7 @@ Common Lisp predicate. Involves type theory, type representation and performance
                "Design, implementation and deployment of an automation software for a product's production chain. "
                "Responsible for fetching measures and firmwares from multiple data sources "
                "and arrange them to achieve a consistent state. "
-               "Then operates a JTAG hardware programmation DLL to interact with the equipement. "
+               "Then operates a JTAG hardware programmation library to interact with the equipement. "
                "Built as an asynchronous Python 3.8 web-service with a PyQt GUI."]]
     [entry
      :picture "https://media.glassdoor.com/sqll/3059/airbus-group-squarelogo-1484558058652.png"
