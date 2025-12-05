@@ -189,19 +189,6 @@ school projects in several languages and technologies."]
 "Currently used to generate the website " [:a {:href "https://ocsigen.org/"} "ocsigen.org"] " holding the
 documentation of the Ocsigen project."]]]
 
-   [section "Publications" [icon "fas" "fa-scroll"]
-    [entry
-     :picture "els.png"
-     :title "European Lisp Symposium 2019"
-     :link "https://www.lrde.epita.fr/wiki/Publications/valais.19.els"
-     :tags (list [code-tag "Common Lisp"]
-                 [article-tag [:a {:href "https://european-lisp-symposium.org/2019/index.html"}
-                               "In proceedings"]]
-                 [agenda-tag "April 1, 2019"])
-     :content [:p "\"Implementing Baker's " [:code "SUBTYPEP"] " Decision Procedure\", based on my research
-work at LRDE. Presentation of an alternative implementation for " [:code "SUBTYPEP"] ", a standard
-Common Lisp predicate. Involves type theory, type representation and performance concerns."]]]
-
    [section "Education" [icon "fas" "fa-graduation-cap"]
     [entry
      :picture epita-logo
@@ -230,6 +217,20 @@ Common Lisp predicate. Involves type theory, type representation and performance
     [skillset @languages]
     [skillset @systems]
     [skillset @skills]]
+
+   [section "Publication" [icon "fas" "fa-scroll"]
+    [entry
+     :picture "els.png"
+     :title "European Lisp Symposium 2019"
+     :link "https://www.lrde.epita.fr/wiki/Publications/valais.19.els"
+     :tags (list [code-tag "Common Lisp"]
+                 [article-tag [:a {:href "https://european-lisp-symposium.org/2019/index.html"}
+                               "In proceedings"]]
+                 [agenda-tag "April 1, 2019"])
+     :content [:p "\"Implementing Baker's " [:code "SUBTYPEP"] " Decision Procedure\", based on my research
+work at LRDE. Presentation of an alternative implementation for " [:code "SUBTYPEP"] ", a standard
+Common Lisp predicate. Involves type theory, type representation and performance concerns."]]]
+
 
    [:footer {:style {:position :absolute :bottom 0 :right 20 :font-size "60%" :color "#777"}}
     "Made with ClojureScript and Reagent. "
