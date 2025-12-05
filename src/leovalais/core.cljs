@@ -1,6 +1,5 @@
 (ns leovalais.core
   (:require [reagent.core :as r]
-            [goog.string :as gstring]
             [goog.string.format]))
 
 (def languages (r/atom
