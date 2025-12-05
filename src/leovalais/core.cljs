@@ -148,7 +148,7 @@
       [contact [icon "fas" "fa-car"] "Driving licence" "#"] contact-separator
       [contact [flag "france"] "Native" "#"] contact-separator
       [contact [flag "uk"] "Professional" "#"]]]]
-  
+
    [section "Experience" [icon "fas" "fa-user-tie"]
     [entry
      :picture "https://media.glassdoor.com/sqll/10358/thales-squarelogo-1454486545402.png"
@@ -160,7 +160,7 @@
                "Design, implementation and deployment of an automation software for a product's production chain. "
                "Responsible for fetching measures and firmwares from multiple data sources "
                "and arrange them to achieve a consistent state. "
-               "Then operates a JTAG hardware programmation library to interact with the equipement. "
+               "Then operates a JTAG hardware programmation library to interact with the equipment. "
                "Built as an asynchronous Python 3.8 web-service with a PyQt GUI."]]
     [entry
      :picture "https://media.glassdoor.com/sqll/3059/airbus-group-squarelogo-1484558058652.png"
@@ -208,14 +208,14 @@ Common Lisp predicate. Involves type theory, type representation and performance
      :picture epita-logo
      :title [:span "EPITA / CTI"]
      :link "https://www.epita.fr/nos-formations/diplome-ingenieur/cycle-ingenieur/les-majeures/#majeure-IMAGE"
-     :tags (list [code-tag "C"] 
+     :tags (list [code-tag "C"]
                  [code-tag "C++17"]
                  [code-tag "Java"]
-                 [place-tag "Le Kremlin-Bicêtre"] 
+                 [place-tag "Le Kremlin-Bicêtre"]
                  [agenda-tag "2015-2020"])
      :content [:p {:style {:margin 0}}
                "Computer Science engineering school. " [emph "Specialization in image processing and machine learning."]
-               " Experience in raytracing, distributed computing, GPU computing, medical imaging, deep learning, real-time graphics, signal processing, algorithmic complexity, scientifc Python, etc."]]
+               " Experience in raytracing, distributed computing, GPU computing, medical imaging, deep learning, real-time graphics, signal processing, algorithmic complexity, scientific Python, etc."]]
     [entry
      :picture lrde-logo
      :title "LRDE"
